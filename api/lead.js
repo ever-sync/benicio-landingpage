@@ -16,9 +16,6 @@ const DEFAULT_FROM = 'Site Benício <site@benicio.com.br>';
 const REGIMES = [
   'Lucro Real',
   'Lucro Presumido',
-  'Simples Nacional',
-  'Imune / Isenta',
-  'Outro / Não sei informar',
 ];
 
 // rate limit best-effort, por instância da função
