@@ -575,6 +575,99 @@
     h1 em::after{height:4px;width:72px}
     .hero-grid{gap:40px}
   }
+
+  /* ---------- PDF PRESENTATION MATCH ---------- */
+  :root{
+    --ink:#f5f6f7;
+    --ink-2:#c6cbd1;
+    --ink-3:#89919b;
+    --paper:#080a0d;
+    --paper-2:#101419;
+    --line:rgba(245,246,247,.18);
+    --line-soft:rgba(245,246,247,.10);
+    --accent:#f4b400;
+  }
+  body{background:var(--paper);color:var(--ink)}
+  body::after{opacity:.018;mix-blend-mode:screen}
+  header{background:rgba(8,10,13,.55);border-bottom-color:rgba(255,255,255,.08)}
+  header.stuck{background:rgba(8,10,13,.92);border-bottom-color:rgba(255,255,255,.10)}
+  .site-link{display:none}
+  .brand-logo{filter:brightness(0) invert(1) sepia(.12) saturate(1.1)}
+  .hero{
+    min-height:clamp(680px,88svh,920px);padding:180px 0 110px;
+    background:#080a0d url("assets/hero-tax-analysis.png") center center/cover no-repeat;
+  }
+  .hero::before{
+    inset:0;top:0;right:0;width:auto;height:auto;
+    background:linear-gradient(90deg,rgba(8,10,13,.98) 0%,rgba(8,10,13,.91) 34%,rgba(8,10,13,.55) 68%,rgba(8,10,13,.20) 100%);
+    z-index:0;
+  }
+  .hero::after{right:7%;top:20%;width:clamp(190px,26vw,360px);height:clamp(190px,26vw,360px);border-color:rgba(244,180,0,.60);box-shadow:0 0 0 25px rgba(244,180,0,.05),0 0 0 50px rgba(244,180,0,.025);z-index:0}
+  .hero-grid{display:block;position:relative;z-index:1}
+  .hero-grid>div:first-child{max-width:760px;padding-left:0}
+  .hero-fig{display:none}
+  .eyebrow{color:var(--accent);font-weight:600;letter-spacing:.25em;margin-bottom:28px}
+  .eyebrow::before{background:var(--accent);height:2px}
+  h1{font-family:var(--sans);font-weight:400;color:#fff;font-size:clamp(3rem,6.2vw,6.4rem);line-height:.98;letter-spacing:-.055em;max-width:11ch}
+  h1 em{color:var(--accent);font-weight:600}
+  h1 em::after{display:none}
+  .h1-rule{display:none}
+  .lede{color:rgba(245,246,247,.78);max-width:64ch;font-size:clamp(1rem,1.3vw,1.18rem);line-height:1.8;margin-top:34px}
+  .lede strong{color:#fff}
+  .scroll-hint{color:rgba(245,246,247,.55)}
+  .scroll-hint .bar{background:rgba(245,246,247,.25)}
+  .scroll-hint .bar::after{background:var(--accent)}
+  .strip{display:none}
+  section{background:var(--paper);color:var(--ink)}
+  section:not(.form-sec)::before{display:none}
+  .window{background:rgba(8,10,13,.96);border:1px solid var(--accent);padding:clamp(30px,5vw,72px);box-shadow:none}
+  .window h2{display:none}
+  .window .sec-label{color:var(--accent);font-weight:600;letter-spacing:.22em;max-width:70ch}
+  .window p{color:var(--ink-2);max-width:72ch}
+  .window p+p{display:none}
+  .band{height:clamp(330px,48vw,570px);background:#080a0d;}
+  .band .par{display:none}
+  .band::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(105deg,transparent 0 100px,rgba(255,255,255,.035) 101px 105px)}
+  .band .veil{background:linear-gradient(90deg,rgba(8,10,13,.90),rgba(8,10,13,.58) 65%,rgba(8,10,13,.22))}
+  .band .sec-label{color:var(--accent);font-weight:600;letter-spacing:.24em}
+  .band h2{max-width:31ch;color:#fff;font-size:clamp(2rem,4.5vw,4.3rem);line-height:1.08}
+  .band h2 em{color:var(--accent)}
+  .band-note{display:none}
+  .items{border-top-color:var(--line)}
+  .item{grid-template-columns:1fr;border-bottom-color:var(--line);padding:27px 0}
+  .item .idx,.item .meta{display:none}
+  .item h3{color:#fff;font-family:var(--sans);font-size:clamp(1.05rem,2vw,1.35rem);font-weight:400;padding-left:30px}
+  .item h3::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:600}
+  .quote{display:none}
+  .form-sec{background:var(--paper-2);border-top:1px solid var(--line-soft)}
+  .form-aside h2{color:#fff;font-family:var(--sans);font-weight:400;max-width:14ch}
+  .form-aside h2 em{color:var(--accent);font-style:normal}
+  .form-aside p{color:var(--ink-2)}
+  .assure{border-top-color:var(--accent)}
+  .assure li{color:var(--ink-2)}
+  .assure li:not(:first-child){display:none}
+  form{background:#080a0d;border:1px solid rgba(244,180,0,.55);box-shadow:none;border-radius:0}
+  .field input,.field select{color:#fff;border-bottom-color:rgba(245,246,247,.25);background:transparent}
+  .field label{color:var(--ink-3)}
+  .field input:focus,.field select:focus{border-bottom-color:var(--accent)}
+  .field .underline{background:var(--accent)}
+  .consent span{color:var(--ink-3)}
+  .box{border-color:rgba(245,246,247,.35)}
+  .submit,.dl{background:var(--accent);color:#080a0d;border-radius:0;box-shadow:none}
+  .submit::before,.dl::before{background:#ffd45c}
+  .foot-note{color:var(--ink-3)}
+  footer{background:#080a0d;border-top:1px solid var(--line-soft)}
+  footer .brand-logo{filter:brightness(0) invert(1) sepia(.12) saturate(1.1)}
+  .f-mail{color:#fff}
+  @media (max-width:900px){
+    .hero{padding:150px 0 92px;min-height:680px}
+  }
+  @media (max-width:520px){
+    .hero{padding:130px 0 82px;min-height:640px;background-position:58% center}
+    .hero::before{background:linear-gradient(90deg,rgba(8,10,13,.98) 0%,rgba(8,10,13,.88) 72%,rgba(8,10,13,.55) 100%)}
+    h1{font-size:clamp(2.75rem,13vw,4rem);max-width:10ch}
+    .window{padding:28px 22px}
+  }
 </style>
 </head>
 <body>
@@ -595,16 +688,17 @@
 <div class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow" data-rv="fade">Tributário · Guia executivo</div>
+      <div class="eyebrow" data-rv="fade">PIS, COFINS E CBS</div>
       <h1>
-        <span class="mask"><i>PIS, Cofins</i></span>
-        <span class="mask" style="--d:110ms"><i>e a chegada</i></span>
+        <span class="mask"><i>Restam apenas 4 meses</i></span>
+        <span class="mask" style="--d:110ms"><i>para agir antes</i></span>
         <span class="mask" style="--d:220ms"><i><em>da CBS.</em></i></span>
       </h1>
       <div class="h1-rule" data-rv="line" style="--d:420ms"></div>
       <p class="lede" data-rv="up" style="--d:520ms">
-        Sua empresa pode ter <strong>créditos ainda não identificados, validados ou aproveitados</strong>.
-        Baixe o guia executivo e entenda por que essa revisão precisa começar agora — não depois.
+        Sua empresa pode ter créditos de PIS e Cofins ainda não identificados, validados ou
+        aproveitados. Baixe gratuitamente o guia executivo e entenda por que essa revisão
+        precisa começar agora.
       </p>
     </div>
     <div class="hero-fig">
@@ -634,18 +728,13 @@
 <section>
   <div class="wrap window">
     <div>
-      <div class="sec-label" data-rv="fade">01 — O contexto</div>
-      <h2 data-rv="up" style="--d:80ms">Uma janela curta para <em>identificar e proteger</em> valores.</h2>
+      <div class="sec-label" data-rv="fade">UMA JANELA CURTA PARA IDENTIFICAR E PROTEGER VALORES</div>
+      <h2 data-rv="up" style="--d:80ms">Uma janela curta para <em>identificar e proteger valores.</em></h2>
     </div>
     <div>
       <p data-rv="up" style="--d:180ms">
         Cada mês de espera reduz o tempo disponível para revisar documentos, corrigir inconsistências
-        e definir a estratégia antes da transição para o novo sistema.
-      </p>
-      <p data-rv="up" style="--d:300ms">
-        A revisão de PIS e Cofins não é um exercício retroativo isolado: ela define a base sobre a qual
-        a empresa entra no regime da CBS. Créditos não mapeados hoje tendem a se tornar
-        discussões mais caras — ou simplesmente perdidas — amanhã.
+        e definir a estratégia antes da transição.
       </p>
     </div>
   </div>
@@ -657,12 +746,8 @@
   <div class="veil"></div>
   <div class="txt">
     <div class="wrap">
-      <div class="sec-label" data-rv="fade">A luz entra por pouco tempo</div>
-      <h2 data-rv="up" style="--d:90ms">O prazo <em>não se estende.</em></h2>
-      <p class="band-note" data-rv="up" style="--d:200ms">
-        Revisão documental, validação de créditos e definição de estratégia levam meses.
-        A conta regressiva já começou.
-      </p>
+      <div class="sec-label" data-rv="fade">O CUSTO DE ESPERAR</div>
+      <h2 data-rv="up" style="--d:90ms">Não revisar também é uma decisão — e ela pode manter dinheiro fora do caixa ou fazer a empresa perder oportunidades.</h2>
     </div>
   </div>
 </div>
@@ -670,8 +755,6 @@
 <!-- CONTEÚDO DO GUIA -->
 <section>
   <div class="wrap">
-    <div class="sec-label" data-rv="fade">02 — O que você recebe</div>
-    <h2 data-rv="up" style="--d:80ms;margin-bottom:56px;max-width:16ch">Quatro frentes tratadas <em>com objetividade.</em></h2>
     <div class="items">
       <div class="item" data-rv="up">
         <span class="idx">I</span>
@@ -715,11 +798,10 @@
 <section class="form-sec" id="guia">
   <div class="wrap form-grid">
     <div class="form-aside">
-      <div class="sec-label" data-rv="fade">Acesso gratuito</div>
+      <div class="sec-label" data-rv="fade">ACESSO GRATUITO</div>
       <h2 data-rv="up" style="--d:80ms">Receba o <em>guia executivo.</em></h2>
       <p data-rv="up" style="--d:160ms">
-        Preencha seus dados profissionais para acessar o material. O download começa
-        automaticamente assim que você enviar o formulário.
+        Preencha seus dados profissionais para acessar o material.
       </p>
       <ul class="assure" data-rv="up" style="--d:240ms">
         <li>
