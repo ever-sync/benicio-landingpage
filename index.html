@@ -576,6 +576,34 @@
     .hero-grid{gap:40px}
   }
 
+  /* ---------- MOBILE FORM ---------- */
+  .field select{
+    color:#fff !important;
+    background-color:#080a0d !important;
+    color-scheme:dark;
+  }
+  .field select option{
+    background:#101419;
+    color:#fff;
+  }
+  @media (max-width:720px){
+    .form-grid{gap:34px}
+    .form-aside h2{max-width:16ch;font-size:clamp(2rem,9vw,3rem)}
+    .form-aside p{max-width:44ch;font-size:.98rem}
+    .assure{margin-top:30px}
+    form{width:100%;min-width:0;padding:28px 20px;border-radius:12px}
+    .field{margin-bottom:2px;padding-bottom:24px}
+    .field input,.field select{font-size:14px;padding-top:20px;padding-bottom:10px}
+    .field label{top:20px;font-size:14px}
+    .consent{gap:11px;margin:12px 0 24px}
+    .consent span{font-size:11.5px;line-height:1.55}
+    .submit{padding:18px 16px;font-size:10.5px;letter-spacing:.2em}
+  }
+  @media (max-width:380px){
+    form{padding-left:16px;padding-right:16px}
+    .consent span{font-size:11px}
+  }
+
   /* ---------- PDF PRESENTATION MATCH ---------- */
   :root{
     --ink:#f5f6f7;
@@ -659,6 +687,29 @@
   footer{background:#080a0d;border-top:1px solid var(--line-soft)}
   footer .brand-logo{filter:brightness(0) invert(1) sepia(.12) saturate(1.1)}
   .f-mail{color:#fff}
+  .field select{
+    color:#fff !important;
+    background-color:#080a0d !important;
+    color-scheme:dark;
+  }
+  .field select option{background:#101419;color:#fff}
+  @media (max-width:720px){
+    .form-grid{gap:34px}
+    .form-aside h2{max-width:16ch;font-size:clamp(2rem,9vw,3rem)}
+    .form-aside p{max-width:44ch;font-size:.98rem}
+    .assure{margin-top:30px}
+    form{width:100%;min-width:0;padding:28px 20px;border-radius:12px}
+    .field{margin-bottom:2px;padding-bottom:24px}
+    .field input,.field select{font-size:14px;padding-top:20px;padding-bottom:10px}
+    .field label{top:20px;font-size:14px}
+    .consent{gap:11px;margin:12px 0 24px}
+    .consent span{font-size:11.5px;line-height:1.55}
+    .submit{padding:18px 16px;font-size:10.5px;letter-spacing:.2em}
+  }
+  @media (max-width:380px){
+    form{padding-left:16px;padding-right:16px}
+    .consent span{font-size:11px}
+  }
   @media (max-width:900px){
     .hero{padding:150px 0 92px;min-height:680px}
   }
