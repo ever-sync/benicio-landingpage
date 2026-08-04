@@ -638,6 +638,7 @@
   .eyebrow::before{background:var(--accent);height:2px}
   h1{font-family:var(--sans);font-weight:400;color:#fff;font-size:clamp(2.6rem,4.7vw,4.9rem);line-height:1.02;letter-spacing:-.055em;max-width:19ch}
   h1 em{color:var(--accent);font-weight:600}
+  h1 .highlight{color:var(--accent);font-weight:600;white-space:nowrap}
   h1 em::after{display:none}
   .h1-rule{display:none}
   .lede{color:rgba(245,246,247,.78);max-width:64ch;font-size:clamp(1rem,1.3vw,1.18rem);line-height:1.8;margin-top:34px}
@@ -741,9 +742,10 @@
     <div>
       <div class="eyebrow" data-rv="fade">PIS, COFINS E CBS</div>
       <h1>
-        <span class="mask"><i>Restam apenas 4 meses</i></span>
-        <span class="mask" style="--d:110ms"><i>para agir antes</i></span>
-        <span class="mask" style="--d:220ms"><i><em>da CBS.</em></i></span>
+        <span class="mask"><i>Restam apenas</i></span>
+        <span class="mask" style="--d:110ms"><i><span class="highlight">4 meses</span></i></span>
+        <span class="mask" style="--d:220ms"><i>para agir antes</i></span>
+        <span class="mask" style="--d:330ms"><i><em>da CBS.</em></i></span>
       </h1>
       <div class="h1-rule" data-rv="line" style="--d:420ms"></div>
       <p class="lede" data-rv="up" style="--d:520ms">
