@@ -720,6 +720,23 @@
     h1{font-size:clamp(2.55rem,11vw,3.7rem);max-width:16ch}
     .window{padding:28px 22px}
   }
+  .hero-timer{
+    position:absolute;right:7%;top:20%;width:clamp(190px,26vw,360px);height:clamp(190px,26vw,360px);
+    z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:#fff;text-align:center;pointer-events:none;
+  }
+  .timer-date{color:var(--accent);font-size:clamp(.58rem,.8vw,.75rem);font-weight:600;letter-spacing:.25em;text-transform:uppercase;margin-bottom:18px}
+  .timer-values{display:flex;align-items:flex-start;gap:clamp(7px,1.2vw,16px)}
+  .timer-unit{display:flex;flex-direction:column;align-items:center;min-width:38px}
+  .timer-unit strong{font-size:clamp(1.45rem,3vw,2.6rem);font-weight:400;line-height:1;letter-spacing:-.04em}
+  .timer-unit span{margin-top:8px;color:rgba(245,246,247,.55);font-size:clamp(.48rem,.65vw,.62rem);letter-spacing:.14em;text-transform:uppercase}
+  .timer-sep{color:var(--accent);font-size:clamp(1.2rem,2.4vw,2rem);line-height:.9;opacity:.72}
+  @media (max-width:520px){
+    .hero-timer{right:-60px;top:9%;width:clamp(190px,58vw,280px);height:clamp(190px,58vw,280px);opacity:.7}
+    .timer-date{margin-bottom:12px}
+    .timer-values{gap:5px}
+    .timer-unit{min-width:29px}
+  }
 </style>
 </head>
 <body>
@@ -738,6 +755,18 @@
 
 <!-- HERO -->
 <div class="hero">
+  <div class="hero-timer" aria-label="Contagem regressiva até 1 de dezembro de 2026">
+    <div class="timer-date">Até 01 de dezembro</div>
+    <div class="timer-values" aria-live="polite">
+      <div class="timer-unit"><strong data-timer="days">00</strong><span>dias</span></div>
+      <div class="timer-sep">:</div>
+      <div class="timer-unit"><strong data-timer="hours">00</strong><span>horas</span></div>
+      <div class="timer-sep">:</div>
+      <div class="timer-unit"><strong data-timer="minutes">00</strong><span>min</span></div>
+      <div class="timer-sep">:</div>
+      <div class="timer-unit"><strong data-timer="seconds">00</strong><span>seg</span></div>
+    </div>
+  </div>
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow" data-rv="fade">PIS, COFINS E CBS</div>
@@ -1018,6 +1047,22 @@
     },{threshold:.5});
     cio.observe(numEl);
   }
+
+  /* ---- hero countdown ---- */
+  var timerTarget=new Date('2026-12-01T00:00:00-03:00').getTime();
+  var timerTick=function(){
+    var diff=Math.max(0,timerTarget-Date.now());
+    var days=Math.floor(diff/86400000); diff%=86400000;
+    var hours=Math.floor(diff/3600000); diff%=3600000;
+    var minutes=Math.floor(diff/60000); diff%=60000;
+    var seconds=Math.floor(diff/1000);
+    document.querySelector('[data-timer="days"]').textContent=String(days).padStart(2,'0');
+    document.querySelector('[data-timer="hours"]').textContent=String(hours).padStart(2,'0');
+    document.querySelector('[data-timer="minutes"]').textContent=String(minutes).padStart(2,'0');
+    document.querySelector('[data-timer="seconds"]').textContent=String(seconds).padStart(2,'0');
+  };
+  timerTick();
+  setInterval(timerTick,1000);
 
   /* ---- floating labels ---- */
   var fields=document.querySelectorAll('.field input, .field select');
