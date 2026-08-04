@@ -1,0 +1,9 @@
+{
+  "name": "benicio-landing-pis-cofins-cbs",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page de captura — Guia PIS, Cofins e CBS — Benício Advogados",
+  "engines": {
+    "node": ">=18"
+  }
+}
