@@ -732,10 +732,21 @@
   .timer-unit span{margin-top:8px;color:rgba(245,246,247,.55);font-size:clamp(.48rem,.65vw,.62rem);letter-spacing:.14em;text-transform:uppercase}
   .timer-sep{color:var(--accent);font-size:clamp(1.2rem,2.4vw,2rem);line-height:.9;opacity:.72}
   @media (max-width:520px){
-    .hero-timer{right:-60px;top:9%;width:clamp(190px,58vw,280px);height:clamp(190px,58vw,280px);opacity:.7}
+    .hero{min-height:0;padding:116px 0 64px;background-position:62% center}
+    .hero::before{background:linear-gradient(90deg,rgba(8,10,13,.99) 0%,rgba(8,10,13,.93) 62%,rgba(8,10,13,.64) 100%)}
+    .hero-grid{gap:28px}
+    .hero-grid>div:first-child{max-width:100%}
+    h1{font-size:clamp(2.45rem,11.5vw,3.35rem);line-height:1.01;max-width:16ch}
+    .lede{font-size:.96rem;line-height:1.7;margin-top:26px;max-width:38ch}
+    .hero-timer{right:-72px;top:8%;width:clamp(190px,58vw,280px);height:clamp(190px,58vw,280px);opacity:.56}
     .timer-date{margin-bottom:12px}
     .timer-values{gap:5px}
     .timer-unit{min-width:29px}
+  }
+  .form-aside .fig,.form-aside .cap{display:none}
+  @media (max-width:720px){
+    .form-sec{padding:70px 0 82px}
+    .form-grid{gap:26px}
   }
 </style>
 </head>
