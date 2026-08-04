@@ -734,11 +734,13 @@
   @media (max-width:520px){
     .hero{min-height:0;padding:116px 0 64px;background-position:62% center}
     .hero::before{background:linear-gradient(90deg,rgba(8,10,13,.99) 0%,rgba(8,10,13,.93) 62%,rgba(8,10,13,.64) 100%)}
-    .hero-grid{gap:28px}
+    .hero-grid{gap:28px;position:relative;z-index:2}
     .hero-grid>div:first-child{max-width:100%}
     h1{font-size:clamp(2.45rem,11.5vw,3.35rem);line-height:1.01;max-width:16ch}
     .lede{font-size:.96rem;line-height:1.7;margin-top:26px;max-width:38ch}
-    .hero-timer{right:-72px;top:8%;width:clamp(190px,58vw,280px);height:clamp(190px,58vw,280px);opacity:.56}
+    .hero-timer{right:-82px;top:8%;width:230px;height:230px;z-index:0;opacity:.38}
+    .timer-date{font-size:.52rem;letter-spacing:.2em}
+    .timer-unit strong{font-size:1.25rem}
     .timer-date{margin-bottom:12px}
     .timer-values{gap:5px}
     .timer-unit{min-width:29px}
